@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Lessons - Stackly</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+<section class="dashboard-section">
+<div class="dash-full">
+<!-- Dashboard Header -->
+<div class="dashboard-header">
+<a aria-label="Stackly home" class="dash-mobile-logo" href="dashboard.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="dashboard-page-title">
+<h1>My Lessons</h1>
+<p>Manage all your upcoming and past sessions in one place.</p>
+</div>
+<div class="dashboard-header-actions">
+<a class="btn btn-primary" href="services.html"><i class="fas fa-calendar-plus" style="margin-right: 8px;"></i>Book New Session</a>
+</div>
+</div>
+<!-- Dashboard Layout -->
+<div class="dash-layout">
+<!-- Sidebar -->
+<aside class="dash-sidebar">
+<div class="dash-sidebar-logo">
+<a aria-label="Stackly home" href="dashboard.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<button aria-label="Close menu" class="dash-sidebar-close" type="button"><i class="fas fa-times"></i></button>
+</div>
+<div class="dash-sidebar-profile">
+<div class="dash-sidebar-avatar">J</div>
+<div>
+<h4>Jordan Miller</h4>
+<span>Plus Student</span>
+</div>
+</div>
+<ul class="dash-menu">
+<li class="dash-menu-item">
+<a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+</li>
+<li class="dash-menu-item active">
+<a href="bookings.html"><i class="fas fa-calendar-alt"></i>My Lessons</a>
+</li>
+<li class="dash-menu-item">
+<a href="payments.html"><i class="fas fa-credit-card"></i>Payments</a>
+</li>
+<li class="dash-menu-item">
+<a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+</li>
+</ul>
+<a class="dash-menu-logout" href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+</aside>
+<!-- Main Content -->
+<div class="dashboard-grid">
+<!-- Main Column -->
+<div class="dashboard-main">
+<!-- Lessons Stats -->
+<div class="dash-stats-grid animate-on-scroll">
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-calendar-check"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">3</span>
+<span class="dash-stat-label">Upcoming</span>
+</div>
+<span class="stat-trend up"><i class="fas fa-arrow-up"></i> 2</span>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-check-double"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">18</span>
+<span class="dash-stat-label">Completed</span>
+</div>
+<span class="stat-trend up"><i class="fas fa-arrow-up"></i> 5</span>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-times-circle"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">2</span>
+<span class="dash-stat-label">Cancelled</span>
+</div>
+<span class="stat-trend down"><i class="fas fa-arrow-down"></i> 1</span>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-clock"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">12</span>
+<span class="dash-stat-label">Hours Reserved</span>
+</div>
+<span class="stat-trend up"><i class="fas fa-arrow-up"></i> 3h</span>
+</div>
+</div>
+<!-- Lesson Filters -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-filter"></i> Filter Lessons</h3>
+<div class="dash-header-tools">
+<div class="dash-search">
+<i class="fas fa-search"></i>
+<input id="bookingSearch" placeholder="Search bookings..." type="text"/>
+</div>
+<select class="dash-select" id="bookingFilter">
+<option value="all">All Status</option>
+<option value="confirmed">Confirmed</option>
+<option value="pending">Pending</option>
+<option value="expired">Cancelled</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Upcoming Lessons -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-hourglass-half"></i> Upcoming Sessions</h3>
+<button class="dash-btn-text">View All <i class="fas fa-arrow-right"></i></button>
+</div>
+<div class="bookings-list">
+<div class="booking-item">
+<div class="booking-date">
+<span class="booking-day">14</span>
+<span class="booking-month">Sep</span>
+</div>
+<div class="booking-info">
+<h4>Mathematics Private Session</h4>
+<p><i class="far fa-clock"></i> 6:00 PM - 7:00 PM  •  <i class="fas fa-user"></i> Tutor Marcus  •  <i class="fas fa-map-marker-alt"></i> Classroom 1</p>
+</div>
+<span class="status-badge confirmed">Confirmed</span>
+<button class="booking-cancel" title="Cancel Lesson"><i class="fas fa-times"></i></button>
+</div>
+<div class="booking-item">
+<div class="booking-date">
+<span class="booking-day">18</span>
+<span class="booking-month">Sep</span>
+</div>
+<div class="booking-info">
+<h4>Group Study Skills Class</h4>
+<p><i class="far fa-clock"></i> 7:30 AM - 8:30 AM  •  <i class="fas fa-user"></i> Tutor Lena  •  <i class="fas fa-map-marker-alt"></i> Studio A</p>
+</div>
+<span class="status-badge confirmed">Confirmed</span>
+<button class="booking-cancel" title="Cancel Lesson"><i class="fas fa-times"></i></button>
+</div>
+<div class="booking-item">
+<div class="booking-date">
+<span class="booking-day">22</span>
+<span class="booking-month">Sep</span>
+</div>
+<div class="booking-info">
+<h4>English Classroom Lesson</h4>
+<p><i class="far fa-clock"></i> 5:00 PM - 6:00 PM  •  <i class="fas fa-user"></i> Classroom #3  •  <i class="fas fa-map-marker-alt"></i> English Center</p>
+</div>
+<span class="status-badge pending">Pending</span>
+<button class="booking-cancel" title="Cancel Lesson"><i class="fas fa-times"></i></button>
+</div>
+<div class="booking-item">
+<div class="booking-date">
+<span class="booking-day">26</span>
+<span class="booking-month">Sep</span>
+</div>
+<div class="booking-info">
+<h4>Science Technique Session</h4>
+<p><i class="far fa-clock"></i> 9:00 AM - 10:00 AM  •  <i class="fas fa-user"></i> Tutor Alex  •  <i class="fas fa-map-marker-alt"></i> Study Hub</p>
+</div>
+<span class="status-badge pending">Pending</span>
+<button class="booking-cancel" title="Cancel Lesson"><i class="fas fa-times"></i></button>
+</div>
+</div>
+</div>
+<!-- Past Lessons -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-history"></i> Past Lessons</h3>
+<button class="dash-btn-text">View All <i class="fas fa-arrow-right"></i></button>
+</div>
+<div class="bookings-list">
+<div class="booking-item">
+<div class="booking-date">
+<span class="booking-day">05</span>
+<span class="booking-month">Sep</span>
+</div>
+<div class="booking-info">
+<h4>Mathematics Private Session</h4>
+<p><i class="far fa-clock"></i> 6:00 PM - 7:00 PM  •  <i class="fas fa-user"></i> Tutor Marcus  •  <i class="fas fa-map-marker-alt"></i> Classroom 1</p>
+</div>
+<span class="status-badge confirmed">Completed</span>
+</div>
+<div class="booking-item">
+<div class="booking-date">
+<span class="booking-day">29</span>
+<span class="booking-month">Aug</span>
+</div>
+<div class="booking-info">
+<h4>Group Study Skills Class</h4>
+<p><i class="far fa-clock"></i> 7:30 AM - 8:30 AM  •  <i class="fas fa-user"></i> Tutor Lena  •  <i class="fas fa-map-marker-alt"></i> Studio A</p>
+</div>
+<span class="status-badge confirmed">Completed</span>
+</div>
+<div class="booking-item">
+<div class="booking-date">
+<span class="booking-day">20</span>
+<span class="booking-month">Aug</span>
+</div>
+<div class="booking-info">
+<h4>Yoga &amp; Mobility Class</h4>
+<p><i class="far fa-clock"></i> 8:00 AM - 9:00 AM  •  <i class="fas fa-user"></i> Tutor Maya  •  <i class="fas fa-map-marker-alt"></i> Studio B</p>
+</div>
+<span class="status-badge expired">Cancelled</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Column -->
+<div class="dashboard-sidebar">
+<!-- Quick Actions -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+</div>
+<div class="quick-actions">
+<a class="quick-action-item" href="services.html">
+<div class="quick-action-icon"><i class="fas fa-calendar-plus"></i></div>
+<span>Book Session</span>
+</a>
+<a class="quick-action-item" href="dashboard.html">
+<div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+<span>Dashboard</span>
+</a>
+<a class="quick-action-item" href="payments.html">
+<div class="quick-action-icon"><i class="fas fa-credit-card"></i></div>
+<span>Payments</span>
+</a>
+<a class="quick-action-item" href="settings.html">
+<div class="quick-action-icon"><i class="fas fa-cog"></i></div>
+<span>Settings</span>
+</a>
+</div>
+</div>
+<!-- Enrollment Card -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-crown"></i> My Enrollment</h3>
+<button class="dash-btn-text">Upgrade <i class="fas fa-arrow-right"></i></button>
+</div>
+<div class="membership-content">
+<span class="membership-plan-badge">Plus Plan</span>
+<div class="membership-price">$89<span>/month</span></div>
+<div class="membership-renewal">Renews on <strong>Oct 1, 2026</strong></div>
+<div class="membership-usage">
+<div class="usage-item">
+<div class="usage-info"><span>Group Classes Used</span><strong>3 / 4</strong></div>
+<div class="usage-bar"><div class="usage-fill" style="width: 75%;"></div></div>
+</div>
+<div class="usage-item">
+<div class="usage-info"><span>Coaching Sessions Used</span><strong>1 / 2</strong></div>
+<div class="usage-bar"><div class="usage-fill" style="width: 50%;"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>

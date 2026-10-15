@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - Stackly</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+<section class="dashboard-section">
+<div class="dash-full">
+<!-- Dashboard Header -->
+<div class="dashboard-header">
+<a aria-label="Stackly home" class="dash-mobile-logo" href="dashboard.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="dashboard-page-title">
+<h1>Settings</h1>
+<p>Update your profile, password and notification preferences.</p>
+</div>
+</div>
+<!-- Dashboard Layout -->
+<div class="dash-layout">
+<!-- Sidebar -->
+<aside class="dash-sidebar">
+<div class="dash-sidebar-logo">
+<a aria-label="Stackly home" href="dashboard.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<button aria-label="Close menu" class="dash-sidebar-close" type="button"><i class="fas fa-times"></i></button>
+</div>
+<div class="dash-sidebar-profile">
+<div class="dash-sidebar-avatar">J</div>
+<div>
+<h4>Jordan Miller</h4>
+<span>Plus Student</span>
+</div>
+</div>
+<ul class="dash-menu">
+<li class="dash-menu-item">
+<a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+</li>
+<li class="dash-menu-item">
+<a href="bookings.html"><i class="fas fa-calendar-alt"></i>My Lessons</a>
+</li>
+<li class="dash-menu-item">
+<a href="payments.html"><i class="fas fa-credit-card"></i>Payments</a>
+</li>
+<li class="dash-menu-item active">
+<a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+</li>
+</ul>
+<a class="dash-menu-logout" href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+</aside>
+<!-- Main Content -->
+<div class="dashboard-grid">
+<!-- Main Column -->
+<div class="dashboard-main">
+<!-- Profile Information -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-user-edit"></i> Profile Information</h3>
+</div>
+<form class="settings-form" id="profileForm">
+<div class="form-row">
+<div class="form-group">
+<label for="settingsName">Full Name *</label>
+<input id="settingsName" type="text" value="Jordan Miller"/>
+</div>
+<div class="form-group">
+<label for="settingsEmail">Email Address *</label>
+<input id="settingsEmail" type="email" value="jordan.miller@email.com"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="settingsPhone">Phone Number</label>
+<input id="settingsPhone" type="tel" value="+1 (555) 987-6543"/>
+</div>
+<div class="form-group">
+<label for="settingsLocation">Location</label>
+<input id="settingsLocation" type="text" value="Brooklyn, NY"/>
+</div>
+</div>
+<button class="btn btn-primary" type="submit">Save Changes</button>
+</form>
+</div>
+<!-- Notification Preferences -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-bell"></i> Notification Preferences</h3>
+</div>
+<div class="toggle-list">
+<div class="toggle-item">
+<div class="toggle-item-info">
+<h4>Session Reminders</h4>
+<p>Get notified 1 hour before your booked sessions.</p>
+</div>
+<label class="toggle-switch">
+<input checked="" type="checkbox"/>
+<span class="toggle-slider"></span>
+</label>
+</div>
+<div class="toggle-item">
+<div class="toggle-item-info">
+<h4>Payment Receipts</h4>
+<p>Receive an email receipt for every payment.</p>
+</div>
+<label class="toggle-switch">
+<input checked="" type="checkbox"/>
+<span class="toggle-slider"></span>
+</label>
+</div>
+<div class="toggle-item">
+<div class="toggle-item-info">
+<h4>Promotions &amp; Offers</h4>
+<p>Get exclusive student deals and seasonal offers.</p>
+</div>
+<label class="toggle-switch">
+<input type="checkbox"/>
+<span class="toggle-slider"></span>
+</label>
+</div>
+<div class="toggle-item">
+<div class="toggle-item-info">
+<h4>Newsletter</h4>
+<p>Monthly newsletter with tips and updates.</p>
+</div>
+<label class="toggle-switch">
+<input checked="" type="checkbox"/>
+<span class="toggle-slider"></span>
+</label>
+</div>
+</div>
+</div>
+<!-- Change Password -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-lock"></i> Change Password</h3>
+</div>
+<form class="settings-form" id="passwordForm">
+<div class="form-group">
+<label for="currentPassword">Current Password *</label>
+<input id="currentPassword" placeholder="Enter current password" type="password"/>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="newPassword">New Password *</label>
+<input id="newPassword" placeholder="Enter new password" type="password"/>
+</div>
+<div class="form-group">
+<label for="confirmPassword">Confirm New Password *</label>
+<input id="confirmPassword" placeholder="Re-enter new password" type="password"/>
+</div>
+</div>
+<button class="btn btn-primary" type="submit">Update Password</button>
+</form>
+</div>
+</div>
+<!-- Sidebar Column -->
+<div class="dashboard-sidebar">
+<!-- Quick Actions -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+</div>
+<div class="quick-actions">
+<a class="quick-action-item" href="dashboard.html">
+<div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+<span>Dashboard</span>
+</a>
+<a class="quick-action-item" href="bookings.html">
+<div class="quick-action-icon"><i class="fas fa-calendar-alt"></i></div>
+<span>My Lessons</span>
+</a>
+<a class="quick-action-item" href="payments.html">
+<div class="quick-action-icon"><i class="fas fa-credit-card"></i></div>
+<span>Payments</span>
+</a>
+<a class="quick-action-item" href="contact.html">
+<div class="quick-action-icon"><i class="fas fa-headset"></i></div>
+<span>Support</span>
+</a>
+</div>
+</div>
+<!-- Enrollment Card -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-crown"></i> My Enrollment</h3>
+<button class="dash-btn-text">Upgrade <i class="fas fa-arrow-right"></i></button>
+</div>
+<div class="membership-content">
+<span class="membership-plan-badge">Plus Plan</span>
+<div class="membership-price">$89<span>/month</span></div>
+<div class="membership-renewal">Renews on <strong>Oct 1, 2026</strong></div>
+<div class="membership-usage">
+<div class="usage-item">
+<div class="usage-info"><span>Group Classes Used</span><strong>3 / 4</strong></div>
+<div class="usage-bar"><div class="usage-fill" style="width: 75%;"></div></div>
+</div>
+<div class="usage-item">
+<div class="usage-info"><span>Coaching Sessions Used</span><strong>1 / 2</strong></div>
+<div class="usage-bar"><div class="usage-fill" style="width: 50%;"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>

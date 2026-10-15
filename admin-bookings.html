@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lessons - Stackly Admin</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+<section class="dashboard-section">
+<div class="dash-full">
+<!-- Dashboard Header -->
+<div class="dashboard-header">
+<a aria-label="Stackly home" class="dash-mobile-logo" href="admin.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="dashboard-page-title">
+<h1>Lessons</h1>
+<p>Track all session bookings, statuses and student activity.</p>
+</div>
+</div>
+<!-- Dashboard Layout -->
+<div class="dash-layout">
+<!-- Sidebar -->
+<aside class="dash-sidebar">
+<div class="dash-sidebar-logo">
+<a aria-label="Stackly home" href="admin.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<button aria-label="Close menu" class="dash-sidebar-close" type="button"><i class="fas fa-times"></i></button>
+</div>
+<div class="dash-sidebar-profile">
+<div class="dash-sidebar-avatar">D</div>
+<div>
+<h4>Daniel Reed</h4>
+<span>Administrator</span>
+</div>
+</div>
+<ul class="dash-menu">
+<li class="dash-menu-item">
+<a href="admin.html"><i class="fas fa-tachometer-alt"></i>Admin</a>
+</li>
+<li class="dash-menu-item">
+<a href="admin-members.html"><i class="fas fa-users"></i>Members</a>
+</li>
+<li class="dash-menu-item active">
+<a href="admin-bookings.html"><i class="fas fa-calendar-alt"></i>Lessons</a>
+</li>
+<li class="dash-menu-item">
+<a href="admin-events.html"><i class="fas fa-calendar-check"></i>Workshops</a>
+</li>
+<li class="dash-menu-item">
+<a href="admin-settings.html"><i class="fas fa-cog"></i>Settings</a>
+</li>
+</ul>
+<a class="dash-menu-logout" href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+</aside>
+<!-- Main Content -->
+<div class="dashboard-grid">
+<!-- Main Column -->
+<div class="dashboard-main">
+<!-- Lesson Stats -->
+<div class="dash-stats-grid animate-on-scroll">
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-calendar-day"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">24</span>
+<span class="dash-stat-label">Lessons Today</span>
+</div>
+<span class="stat-trend up"><i class="fas fa-arrow-up"></i> 6</span>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-hourglass-half"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">87</span>
+<span class="dash-stat-label">Upcoming</span>
+</div>
+<span class="stat-trend up"><i class="fas fa-arrow-up"></i> 12</span>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-check-double"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">318</span>
+<span class="dash-stat-label">Completed</span>
+</div>
+<span class="stat-trend up"><i class="fas fa-arrow-up"></i> 24</span>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-times-circle"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">12</span>
+<span class="dash-stat-label">Cancelled</span>
+</div>
+<span class="stat-trend down"><i class="fas fa-arrow-down"></i> 3</span>
+</div>
+</div>
+<!-- Lessons Table -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-calendar-alt"></i> All Lessons</h3>
+<div class="dash-header-tools">
+<div class="dash-search">
+<i class="fas fa-search"></i>
+<input id="adminBookingSearch" placeholder="Search bookings..." type="text"/>
+</div>
+</div>
+</div>
+<div class="table-wrapper">
+<table class="dash-table">
+<thead>
+<tr>
+<th>Student</th>
+<th>Activity</th>
+<th>Date</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">J</span>
+<div>
+<strong>Jordan Miller</strong>
+<span>jordan.miller@email.com</span>
+</div>
+</div>
+</td>
+<td>Private Session</td>
+<td>Sep 14, 6:00 PM</td>
+<td><span class="status-badge confirmed">Confirmed</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">S</span>
+<div>
+<strong>Samantha Lee</strong>
+<span>sam.lee@email.com</span>
+</div>
+</div>
+</td>
+<td>Studio Class</td>
+<td>Sep 18, 7:30 AM</td>
+<td><span class="status-badge confirmed">Confirmed</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">A</span>
+<div>
+<strong>Alex Chen</strong>
+<span>alex.chen@email.com</span>
+</div>
+</div>
+</td>
+<td>Classroom #3</td>
+<td>Sep 22, 5:00 PM</td>
+<td><span class="status-badge pending">Pending</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">M</span>
+<div>
+<strong>Marcus Johnson</strong>
+<span>marcus.j@email.com</span>
+</div>
+</div>
+</td>
+<td>Technique Session</td>
+<td>Sep 26, 9:00 AM</td>
+<td><span class="status-badge pending">Pending</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">E</span>
+<div>
+<strong>Emily Davis</strong>
+<span>emily.davis@email.com</span>
+</div>
+</div>
+</td>
+<td>Yoga &amp; Mobility</td>
+<td>Aug 20, 8:00 AM</td>
+<td><span class="status-badge expired">Cancelled</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Sidebar Column -->
+<div class="dashboard-sidebar">
+<!-- Today's Schedule -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-clock"></i> Today's Schedule</h3>
+</div>
+<div class="admin-events-list">
+<div class="admin-event-item">
+<div class="admin-event-date">
+<span class="event-day">09</span>
+<span class="event-month">AM</span>
+</div>
+<div class="admin-event-info">
+<h4>Group Study Skills Class</h4>
+<p><i class="fas fa-users"></i> 18 members</p>
+</div>
+</div>
+<div class="admin-event-item">
+<div class="admin-event-date">
+<span class="event-day">11</span>
+<span class="event-month">AM</span>
+</div>
+<div class="admin-event-info">
+<h4>Science Clinic</h4>
+<p><i class="fas fa-users"></i> 12 members</p>
+</div>
+</div>
+<div class="admin-event-item">
+<div class="admin-event-date">
+<span class="event-day">02</span>
+<span class="event-month">PM</span>
+</div>
+<div class="admin-event-info">
+<h4>English Classroom 3</h4>
+<p><i class="fas fa-users"></i> 4 members</p>
+</div>
+</div>
+<div class="admin-event-item">
+<div class="admin-event-date">
+<span class="event-day">06</span>
+<span class="event-month">PM</span>
+</div>
+<div class="admin-event-info">
+<h4>Mathematics Private</h4>
+<p><i class="fas fa-users"></i> 1 student</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+</div>
+<div class="quick-actions">
+<a class="quick-action-item" href="admin.html">
+<div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+<span>Dashboard</span>
+</a>
+<a class="quick-action-item" href="admin-members.html">
+<div class="quick-action-icon"><i class="fas fa-users"></i></div>
+<span>Members</span>
+</a>
+<a class="quick-action-item" href="admin-events.html">
+<div class="quick-action-icon"><i class="fas fa-calendar-check"></i></div>
+<span>Workshops</span>
+</a>
+<a class="quick-action-item" href="admin-settings.html">
+<div class="quick-action-icon"><i class="fas fa-cog"></i></div>
+<span>Settings</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>

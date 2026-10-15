@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Members - Stackly Admin</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- DASHBOARD - SECTION -->
+<section class="dashboard-section">
+<div class="dash-full">
+<!-- Dashboard Header -->
+<div class="dashboard-header">
+<a aria-label="Stackly home" class="dash-mobile-logo" href="admin.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<div class="dash-hamburger" id="dashMenuToggle" title="Menu">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="dashboard-page-title">
+<h1>Members</h1>
+<p>Manage all academy members, plans and account statuses.</p>
+</div>
+<div class="dashboard-header-actions">
+<a class="btn btn-primary" href="#"><i class="fas fa-user-plus" style="margin-right: 8px;"></i>Add Student</a>
+</div>
+</div>
+<!-- Dashboard Layout -->
+<div class="dash-layout">
+<!-- Sidebar -->
+<aside class="dash-sidebar">
+<div class="dash-sidebar-logo">
+<a aria-label="Stackly home" href="admin.html"><img alt="Stackly" src="images/stackly logo.webp"/></a>
+<button aria-label="Close menu" class="dash-sidebar-close" type="button"><i class="fas fa-times"></i></button>
+</div>
+<div class="dash-sidebar-profile">
+<div class="dash-sidebar-avatar">D</div>
+<div>
+<h4>Daniel Reed</h4>
+<span>Administrator</span>
+</div>
+</div>
+<ul class="dash-menu">
+<li class="dash-menu-item">
+<a href="admin.html"><i class="fas fa-tachometer-alt"></i>Admin</a>
+</li>
+<li class="dash-menu-item active">
+<a href="admin-members.html"><i class="fas fa-users"></i>Members</a>
+</li>
+<li class="dash-menu-item">
+<a href="admin-bookings.html"><i class="fas fa-calendar-alt"></i>Lessons</a>
+</li>
+<li class="dash-menu-item">
+<a href="admin-events.html"><i class="fas fa-calendar-check"></i>Workshops</a>
+</li>
+<li class="dash-menu-item">
+<a href="admin-settings.html"><i class="fas fa-cog"></i>Settings</a>
+</li>
+</ul>
+<a class="dash-menu-logout" href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+</aside>
+<!-- Main Content -->
+<div class="dashboard-grid">
+<!-- Main Column -->
+<div class="dashboard-main">
+<!-- Student Stats -->
+<div class="dash-stats-grid animate-on-scroll">
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-users"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">1,248</span>
+<span class="dash-stat-label">Total Members</span>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-user-check"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">1,102</span>
+<span class="dash-stat-label">Happy Students</span>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-user-clock"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">73</span>
+<span class="dash-stat-label">Pending Accounts</span>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon"><i class="fas fa-user-plus"></i></div>
+<div class="dash-stat-info">
+<span class="dash-stat-number">96</span>
+<span class="dash-stat-label">New This Month</span>
+</div>
+</div>
+</div>
+<!-- Members Table -->
+<div class="dash-card animate-on-scroll from-left">
+<div class="dash-card-header">
+<h3><i class="fas fa-user-friends"></i> All Members</h3>
+<div class="dash-header-tools">
+<div class="dash-search">
+<i class="fas fa-search"></i>
+<input id="memberSearch" placeholder="Search members..." type="text"/>
+</div>
+<select class="dash-select" id="memberPlanFilter">
+<option value="all">All Plans</option>
+<option value="basic">Starter</option>
+<option value="pro">Plus</option>
+<option value="elite">Advanced</option>
+</select>
+</div>
+</div>
+<div class="table-wrapper">
+<table class="dash-table">
+<thead>
+<tr>
+<th>Student</th>
+<th>Plan</th>
+<th>Joined</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">J</span>
+<div>
+<strong>Jordan Miller</strong>
+<span>jordan.miller@email.com</span>
+</div>
+</div>
+</td>
+<td><span class="plan-badge pro">Plus</span></td>
+<td>Jan 12, 2026</td>
+<td><span class="status-badge confirmed">Active</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">A</span>
+<div>
+<strong>Alex Chen</strong>
+<span>alex.chen@email.com</span>
+</div>
+</div>
+</td>
+<td><span class="plan-badge elite">Advanced</span></td>
+<td>Feb 03, 2026</td>
+<td><span class="status-badge confirmed">Active</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">S</span>
+<div>
+<strong>Samantha Lee</strong>
+<span>sam.lee@email.com</span>
+</div>
+</div>
+</td>
+<td><span class="plan-badge basic">Starter</span></td>
+<td>Mar 20, 2026</td>
+<td><span class="status-badge pending">Pending</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">M</span>
+<div>
+<strong>Marcus Johnson</strong>
+<span>marcus.j@email.com</span>
+</div>
+</div>
+</td>
+<td><span class="plan-badge pro">Plus</span></td>
+<td>Apr 15, 2026</td>
+<td><span class="status-badge confirmed">Active</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">E</span>
+<div>
+<strong>Emily Davis</strong>
+<span>emily.davis@email.com</span>
+</div>
+</div>
+</td>
+<td><span class="plan-badge elite">Advanced</span></td>
+<td>May 08, 2026</td>
+<td><span class="status-badge confirmed">Active</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="table-user">
+<span class="table-avatar">O</span>
+<div>
+<strong>Olivia Brown</strong>
+<span>olivia.brown@email.com</span>
+</div>
+</div>
+</td>
+<td><span class="plan-badge basic">Starter</span></td>
+<td>Jun 30, 2026</td>
+<td><span class="status-badge expired">Inactive</span></td>
+<td>
+<div class="table-actions">
+<button title="Edit"><i class="fas fa-edit"></i></button>
+<button title="Delete"><i class="fas fa-trash"></i></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Sidebar Column -->
+<div class="dashboard-sidebar">
+<!-- Plan Distribution -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-chart-pie"></i> Plan Distribution</h3>
+</div>
+<div class="plan-distribution">
+<div class="plan-dist-item">
+<span class="plan-dist-label"><span class="plan-dot basic"></span>Starter</span>
+<div class="plan-dist-bar"><div class="plan-dist-fill basic" style="width: 35%;"></div></div>
+<span class="plan-dist-value">437</span>
+</div>
+<div class="plan-dist-item">
+<span class="plan-dist-label"><span class="plan-dot pro"></span>Plus</span>
+<div class="plan-dist-bar"><div class="plan-dist-fill pro" style="width: 45%;"></div></div>
+<span class="plan-dist-value">562</span>
+</div>
+<div class="plan-dist-item">
+<span class="plan-dist-label"><span class="plan-dot elite"></span>Advanced</span>
+<div class="plan-dist-bar"><div class="plan-dist-fill elite" style="width: 20%;"></div></div>
+<span class="plan-dist-value">249</span>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="dash-card animate-on-scroll from-right">
+<div class="dash-card-header">
+<h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+</div>
+<div class="quick-actions">
+<a class="quick-action-item" href="#">
+<div class="quick-action-icon"><i class="fas fa-user-plus"></i></div>
+<span>Add Student</span>
+</a>
+<a class="quick-action-item" href="admin.html">
+<div class="quick-action-icon"><i class="fas fa-tachometer-alt"></i></div>
+<span>Dashboard</span>
+</a>
+<a class="quick-action-item" href="admin-bookings.html">
+<div class="quick-action-icon"><i class="fas fa-calendar-alt"></i></div>
+<span>Lessons</span>
+</a>
+<a class="quick-action-item" href="admin-events.html">
+<div class="quick-action-icon"><i class="fas fa-calendar-check"></i></div>
+<span>Workshops</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>
